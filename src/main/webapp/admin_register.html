@@ -1,0 +1,357 @@
+
+<!DOCTYPE html>
+<html>
+
+<head>
+
+<meta charset="UTF-8">
+<title>Admin Registration</title>
+
+<style>
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+
+body {
+    min-height: 100vh;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    background: linear-gradient(135deg, #141e30, #243b55);
+
+    padding: 30px;
+}
+
+
+/* Registration Box */
+
+.register-box {
+    width: 480px;
+
+    padding: 40px;
+
+    background: rgba(255, 255, 255, 0.12);
+
+    backdrop-filter: blur(15px);
+
+    border: 1px solid rgba(255, 255, 255, 0.25);
+
+    border-radius: 20px;
+
+    box-shadow: 0 20px 45px rgba(0, 0, 0, 0.4);
+
+    color: white;
+}
+
+
+/* Icon */
+
+.icon {
+    text-align: center;
+
+    font-size: 55px;
+
+    margin-bottom: 8px;
+}
+
+
+/* Heading */
+
+h1 {
+    text-align: center;
+
+    font-size: 28px;
+
+    margin-bottom: 8px;
+}
+
+.subtitle {
+    text-align: center;
+
+    color: #d5d5d5;
+
+    font-size: 14px;
+
+    margin-bottom: 30px;
+}
+
+
+/* Form Group */
+
+.form-group {
+    margin-bottom: 18px;
+}
+
+label {
+    display: block;
+
+    margin-bottom: 7px;
+
+    font-size: 14px;
+
+    color: #eeeeee;
+}
+
+
+/* Input */
+
+input[type="text"],
+input[type="password"],
+input[type="email"],
+input[type="number"] {
+
+    width: 100%;
+
+    padding: 13px 14px;
+
+    border: 1px solid rgba(255, 255, 255, 0.25);
+
+    border-radius: 10px;
+
+    outline: none;
+
+    background: rgba(255, 255, 255, 0.15);
+
+    color: white;
+
+    font-size: 15px;
+
+    transition: 0.3s;
+}
+
+
+input::placeholder {
+    color: #c5c5c5;
+}
+
+
+input:focus {
+    border-color: #00c6ff;
+
+    background: rgba(255, 255, 255, 0.2);
+
+    box-shadow: 0 0 8px rgba(0, 198, 255, 0.3);
+}
+
+
+/* Register Button */
+
+.register-btn {
+
+    width: 100%;
+
+    padding: 14px;
+
+    margin-top: 8px;
+
+    border: none;
+
+    border-radius: 10px;
+
+    background: linear-gradient(135deg, #ff9800, #ffc107);
+
+    color: white;
+
+    font-size: 16px;
+
+    font-weight: bold;
+
+    cursor: pointer;
+
+    transition: 0.3s;
+}
+
+
+.register-btn:hover {
+
+    transform: translateY(-2px);
+
+    box-shadow: 0 8px 20px rgba(255, 165, 0, 0.4);
+}
+
+
+/* Back Link */
+
+.back {
+
+    display: block;
+
+    text-align: center;
+
+    margin-top: 22px;
+
+    color: #d0d7de;
+
+    text-decoration: none;
+
+    font-size: 14px;
+
+    transition: 0.3s;
+}
+
+
+.back:hover {
+    color: white;
+}
+
+
+/* Responsive */
+
+@media(max-width: 550px) {
+
+    body {
+        padding: 20px;
+    }
+
+    .register-box {
+
+        width: 100%;
+
+        padding: 30px 25px;
+    }
+
+    h1 {
+        font-size: 25px;
+    }
+
+}
+
+</style>
+
+</head>
+
+
+<body>
+
+
+<div class="register-box">
+
+
+    <div class="icon">
+        👨‍💼
+    </div>
+
+
+    <h1>Admin Registration</h1>
+
+
+    <p class="subtitle">
+        Create your administrator account
+    </p>
+
+
+    <form action="admin_register" method="post">
+
+
+        <!-- Admin Name -->
+
+        <div class="form-group">
+
+            <label>Admin Name</label>
+
+            <input type="text"
+                   name="aname"
+                   placeholder="Enter admin name"
+                   required="required">
+
+        </div>
+
+
+        <!-- Password -->
+
+        <div class="form-group">
+
+            <label>Password</label>
+
+            <input type="password"
+                   name="pwd"
+                   placeholder="Create a password"
+                   required="required">
+
+        </div>
+
+
+        <!-- First Name -->
+
+        <div class="form-group">
+
+            <label>First Name</label>
+
+            <input type="text"
+                   name="fname"
+                   placeholder="Enter first name"
+                   required="required">
+
+        </div>
+
+
+        <!-- Last Name -->
+
+        <div class="form-group">
+
+            <label>Last Name</label>
+
+            <input type="text"
+                   name="lname"
+                   placeholder="Enter last name"
+                   required="required">
+
+        </div>
+
+
+        <!-- Mail -->
+
+        <div class="form-group">
+
+            <label>Mail ID</label>
+
+            <input type="email"
+                   name="mid"
+                   placeholder="Enter email address"
+                   required="required">
+
+        </div>
+
+
+        <!-- Phone -->
+
+        <div class="form-group">
+
+            <label>Phone Number</label>
+
+            <input type="number"
+                   name="phno"
+                   placeholder="Enter phone number"
+                   required="required">
+
+        </div>
+
+
+        <!-- Register -->
+
+        <input type="submit"
+               value="Create Account"
+               class="register-btn">
+
+
+    </form>
+
+
+    <a href="admin_login.jsp" class="back">
+        ← Already have an account? Login
+    </a>
+
+
+</div>
+
+
+</body>
+
+</html>
+
